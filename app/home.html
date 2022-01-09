@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>warsturdy - Official Site</title>
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto:400,500" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+            html, body {
+                background-color: #FAFAFA;
+                padding: 0;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                font-family: "Roboto", arial;
+            }
+
+            h1 {
+                font-family: "Roboto", arial;
+                font-size: 45px;
+                font-weight: 500;
+            }
+            #page-1 {
+                height: 100%;
+            }
+            #page-1 .page-1-bottom {
+                position: fixed;
+                bottom: 25px;
+                left: 25px;
+                right: 25px;
+            }
+
+            button {
+                background: #1A73EF !important;
+                font-size: 14px !important;
+                text-transform: uppercase !important;
+                font-weight: 500 !important;
+                letter-spacing: .5px !important;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.44) !important;
+            }
+            button:focus {
+                box-shadow: none !important;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            
+        </nav>
+        <div class="scene" id="page-1">
+            <div class="jumbotron p-9 m-5">
+                <h1>warsturdy.github.io</h1>
+
+                <p>Welcome to my website.</p>
+
+                <button class="btn-primary btn">Explore</button>
+            </div>
+
+            <div class="page-1-bottom">
+            <!-- hitwebcounter Code START -->
+            <a href="https://www.hitwebcounter.com" target="_blank" style="text-decoration: none;color:dodgerblue;">
+            This page has been viewed 
+            <img src="https://hitwebcounter.com/counter/counter.php?page=7923956&style=0006&nbdigits=9&type=page&initCount=0" title="Free Counter" Alt="web counter" style="vertical-align: middle;margin: 0 5px;"/>
+            time since January 9, 2022.
+            </a>
+            </div>
+        </div>
+
+        <div class="scene"></div>
+        <script>
+            var scenes = document.getElementsByClassName("scene");
+
+            function page(i) {
+                for (var j = 0; j < scenes.length; j++) {
+                    scenes[j].style.display = "none";
+
+                    scenes[j].style.animation = "0.3s sSwitch forwards";
+
+                }
+
+                scenes[i].style.display = "block";
+            }
+            page(0);
+            
+        </script>
+    </body>
+</html>
