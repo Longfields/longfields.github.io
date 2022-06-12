@@ -3,11 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>warsturdy - Official Site</title>
-        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto:400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <style>
             html, body {
-                background-color: #FAFAFA;
+                background-color: #202124;
                 padding: 0;
                 margin: 0;
                 height: 100%;
@@ -19,7 +20,19 @@
                 font-family: "Roboto", arial;
                 font-size: 45px;
                 font-weight: 500;
+                color: #E8EAED;
             }
+            h2,h3,h4,h5,h6 {
+                color: #E8EAED;
+            }
+
+            p {
+                font-family: "Roboto", arial;
+                font-size: 16px;
+                color: #9AA0A6; 
+                line-height: 24px;
+            }
+
             #page-1 {
                 height: 100%;
             }
@@ -31,30 +44,83 @@
             }
 
             button {
-                background: #1A73EF !important;
+                background: #8ab4f8 !important;
                 font-size: 14px !important;
                 text-transform: uppercase !important;
                 font-weight: 500 !important;
                 letter-spacing: .5px !important;
-                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.44) !important;
-            }
-            button:focus {
                 box-shadow: none !important;
+                border: none !important;
+                color: #000 !important;
+                padding: 0 16px !important;
+                height: 36px !important;
+                transition: all 0.42s !important;
+            }
+            button:hover {
+                background: #aacafd !important;
+                transform: translate(0px, -2px) !important;
+            }
+            button:active {
+                background: #5c8edf !important;
+                box-shadow: none !important;
+                transform: translate(0px, 0px) !important;
+            }
+
+            nav.navbar {
+                height: 76px;
+                
+            }
+            nav.navbar a.nav-link {
+                color: #8ab4f8;
+                transition: 0.1s;
+            }
+            nav.navbar a.nav-link:hover {
+                transform: scale(1.1);
+            }
+
+            .jumbotron {
+                background-color: #202124 !important;
+                border: 1px solid #8ab4f8 !important;
             }
         </style>
     </head>
     <body>
-        <nav>
-            <a href="index.html">Home</a>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="index.html">warsturdy</a>
+            <a class="nav-link active" href="index.html">Home</a>
+
+            <a class="nav-link" href="files.html">Files</a>
+
+            <a class="nav-link" href="showcase.html">Showcase</a>
+
+            <a class="nav-link" href="showcase.html">Contact</a>
         </nav>
         <div class="scene" id="page-1">
-            <div class="jumbotron p-9 m-5">
+            <div class="jumbotron">
                 <h1>warsturdy.github.io</h1>
 
                 <p>Last updated 2022-06-11</p>
 
                 <button class="btn-primary btn">Explore</button>
             </div>
+            <div class="container">
+                <div class="row">
+                    <div class="jumbotron col-sm-6">
+                        <h2>Top Projects <span class="material-symbols-outlined">code</span></h2>
+        
+                        <p class="mt-4">Check back later to view <a href="files.html">future projects</a></p>
+                    </div>
+        
+                    <div class="jumbotron  col-sm-6">
+                        <h2>Contact <span class="material-symbols-outlined">call</span></h2>
+        
+                        <p class="mt-4">View contact information to <a href="files.html">hire me</a></p>
+                    </div>
+                </div>
+            </div>
+            
+
+            
 
             <div class="page-1-bottom">
             <!-- hitwebcounter Code START -->
