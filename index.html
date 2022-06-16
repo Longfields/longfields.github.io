@@ -5,6 +5,11 @@
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <style>
+    .ds {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <div id="app">
@@ -14,13 +19,40 @@
             <template>
                 
                   <v-app-bar
-                    color="red darken-4"
+                    color="black"
                     dark
+                    dense
+                    fixed
                   >
                     <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
               
                     <v-toolbar-title>warsturdy</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-btn icon @click="search = !search">
+                      <v-icon>mdi-magnify</v-icon>
+                    </v-btn>
                   </v-app-bar>
+
+                  <v-form v-bind:class="{ds: search}">
+                    <v-container fluid>
+                  <v-col cols="12" sm="6" md="3">
+                  <v-text-field v-model="searchIndex" :items="searchList" attach multiple label="Solo" placeholder="Search" @input="searchPages" solo></v-text-field>
+                </v-col>
+                  <v-list>
+                    <v-list-item-group>
+                      <v-list-item v-for="(item, i) in searchList">
+                        <v-list-item-content>
+                          <v-list-item-title v-text="item">
+
+                          </v-list-item-title>
+                        </v-list-item-content>
+                      </v-list-item>
+                    </v-list-item-group>
+                   
+                  </v-list>
+                
+              </v-container>
+              </v-form>
               
                   <v-navigation-drawer
                     v-model="drawer"
@@ -175,11 +207,36 @@
   el: '#app',
   vuetify: new Vuetify(),
   data: {
+    search: true,
+    searchIndex:"",
+    searchList: [
+      "files",
+      "home",
+      "showcase",
+    ],
+    searchOrigin: [],
     drawer: false,
     tab: null,
       items: [
         'web', 'shopping', 'videos', 'images', 'news',
       ],
+  },
+  mounted() {
+    this.searchOrigin = [...this.searchList];
+    this.searchList = [];
+  },
+  methods: {
+    searchPages(i) {
+      if (!this.searchIndex) {
+        this.searchList = this.searchOrigin;
+      }
+      this.searchList = this.searchOrigin.filter((e) => {
+        return e.toLowerCase().indexOf(this.searchIndex.toLowerCase()) > -1;
+      })
+      if (this.searchIndex = "") {
+        this.searchList = [];
+      }
+    }
   }
 })
   </script>
