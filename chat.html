@@ -22,12 +22,7 @@
     </form>
     <script src="/socket.io/socket.io.js"></script>
 <script>
-  import { io } from "socket.io-client";
-
-const socket = io("https://warsturdy.github.io", {
-  path: "/chat.html"
-});
-  //var socket = io("");
+  var socket = io("");
 
   var messages = document.getElementById('messages');
   var form = document.getElementById('form');
