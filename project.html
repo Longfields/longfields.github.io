@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+  Warsturdy.github.io
+
+  Projects page.
+  Current Project: [TEAM OPES HOMEPAGE]
+  Description: Primavera 2023
+-->
+<html>
+<head>
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Project | Warsturdy.github.io</title>
+    <style>
+        #logo {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            padding: 0 50px;
+            text-align: center;
+        }
+        #logo.remove {
+            animation: 3s removeLogo forwards;
+        }
+        @keyframes removeLogo {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0, -100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="logo" class="light-green lighten-5">
+        <p class="center-align green-text text-darken-2" style="margin-top: 25px;">Developed by</p>
+        <h1 class="center-align green-text text-darken-2" style="margin-top:0px;">LeaferStudios</h1>
+        <div class="progress green accent-1">
+            <div class="indeterminate green accent-4"></div>
+        </div>
+        <p class="center-align green-text text-darken-2">Loading Project...</p>
+    </div>
+    <div id="app">
+        <div class="scene">
+            <h1>Hello World!</h1>
+
+            <button>Click</button>
+
+            <p>To Do: Finish Main, About, Projects, Members Page</p>
+        </div>
+        <div class="scene">
+            Invisible.
+        </div>
+    </div>
+    <script type="application/javascript">
+        var projectOn = 0;
+
+        function runLogo() {
+            document.getElementById("logo").classList.toggle("remove");
+        }
+        setTimeout(runLogo, 1000);
+
+        function switchScene(index) {
+            for (var i = 0; i < document.getElementsByClassName("scene").length; i++) {
+                document.getElementsByClassName("scene")[i].style.display = "none";
+            }
+            document.getElementsByClassName("scene")[index].style.display = "block";
+        }
+        switchScene(0);
+    </script>
+</body>
+</html>
