@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Job Application Form</title>
+        <style>
+ 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  .formbold-mb-3 {
+    margin-bottom: 0px;
+  }
+
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 570px;
+    width: 100%;
+    background: white;
+    padding: 40px;
+  }
+
+  .formbold-img {
+    display: block;
+    margin: 0 auto 45px;
+  }
+
+  .formbold-input-wrapp > div {
+    display: flex;
+    gap: 20px;
+  }
+
+  .formbold-input-flex {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  .formbold-input-flex > div {
+    width: 50%;
+  }
+  .formbold-form-input {
+    width: 100%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #536387;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input::placeholder,
+  select.formbold-form-input,
+  .formbold-form-input[type='date']::-webkit-datetime-edit-text,
+  .formbold-form-input[type='date']::-webkit-datetime-edit-month-field,
+  .formbold-form-input[type='date']::-webkit-datetime-edit-day-field,
+  .formbold-form-input[type='date']::-webkit-datetime-edit-year-field {
+    color: rgba(83, 99, 135, 0.5);
+  }
+
+  .formbold-form-input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  .formbold-form-label {
+    color: #07074D;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .formbold-form-file-flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .formbold-form-file-flex .formbold-form-label {
+    margin-bottom: 0;
+  }
+  .formbold-form-file {
+    font-size: 14px;
+    line-height: 24px;
+    color: #536387;
+  }
+  .formbold-form-file::-webkit-file-upload-button {
+    display: none;
+  }
+  .formbold-form-file:before {
+    content: 'Upload file';
+    display: inline-block;
+    background: #EEEEEE;
+    border: 0.5px solid #FBFBFB;
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 3px 12px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    color: #637381;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 10px;
+  }
+
+  .formbold-btn {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 14px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: #6a64f1;
+    color: white;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold-w-45 {
+    width: 45%;
+  }#fs-btn {
+      
+                background-color: rgb(0, 0, 0, 0.6);
+                border:none;
+                border-radius:50%;
+                height:50px;
+                width:50px;
+                text-align:center;
+                vertical-align:middle;
+                position: absolute;
+                right: 25px;
+                bottom: 10px;
+                opacity: 0;
+            }
+</style>
+
+    </head>
+    <body>
+    <h1 style="text-align:center;padding-top:5px;">
+    Job Application Form
+    </h1>
+    <h2 style="text-align:center;margin-bottom:-0px;padding-bottom:-50px;">
+    Position: Cashier
+    </h2>
+    <p style="text-align:center;margin-bottom:-48px;padding-bottom:-50px;">Programmed by Eldiiar Bekbolotov</p>
+<div class="formbold-main-wrapper">
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  <div class="formbold-form-wrapper">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Assorted_United_States_coins.jpg" width="100%" height="150">
+     <h1 style="padding:35px 0;">
+     Part 1: Personal Information
+     </h1>
+    <form>
+      <div class="formbold-input-flex">
+        <div>
+          <label for="firstname" class="formbold-form-label"> First Name </label>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder=""
+            class="formbold-form-input"
+          />
+        </div>
+
+        <div>
+          <label for="lastname" class="formbold-form-label"> Last Name </label>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder=""
+            class="formbold-form-input"
+          />
+        </div>
+      </div>
+
+      <div class="formbold-input-flex">
+        <div>
+            <label for="email" class="formbold-form-label"> Email </label>
+            <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder=""
+            class="formbold-form-input"
+            />
+        </div>
+
+        <div>
+            <label class="formbold-form-label">Gender</label>
+
+            <select class="formbold-form-input" name="occupation" id="occupation">
+            <option value="male"></option>
+            <option value="female"></option>
+            <option value="others"></option>
+            </select>
+        </div>
+      </div>
+
+      <div class="formbold-mb-3 formbold-input-wrapp">
+        <label for="phone" class="formbold-form-label"> Phone </label>
+
+        <div>
+          <input
+            type="text"
+            name="areacode"
+            id="areacode"
+            placeholder="Area code"
+            class="formbold-form-input formbold-w-45"
+          />
+
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Phone number"
+            class="formbold-form-input"
+          />
+        </div>
+      </div>
+      
+      <div class="formbold-mb-3">
+        <label for="age" class="formbold-form-label">Social Security Number (SSN):</label>
+        <input
+          type="text"
+          name="age"
+          id="age"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-mb-3">
+        <label for="age" class="formbold-form-label"> Applying for Position: </label>
+        <input
+          type="text"
+          name="age"
+          id="age"
+          class="formbold-form-input"
+        />
+      </div>
+      
+      <div class="formbold-mb-3">
+        <label for="age" class="formbold-form-label"> Desired Pay: </label>
+        <input
+          type="text"
+          name="age"
+          id="age"
+          class="formbold-form-input"
+        />
+      </div>
+      
+      <div class="formbold-mb-3">
+        <label for="age" class="formbold-form-label">Employment Desired:</label>
+        <input
+          type="text"
+          name="age"
+          id="age"
+          class="formbold-form-input"
+        />
+      </div>
+      
+      <div class="formbold-mb-3">
+        <label for="dob" class="formbold-form-label">Current Date: </label>
+        <input type="date" name="dob" id="dob" class="formbold-form-input" />
+      </div>
+
+      <div class="formbold-mb-3">
+        <label for="dob" class="formbold-form-label"> When can you start? </label>
+        <input type="date" name="dob" id="dob" class="formbold-form-input" />
+      </div>
+
+      <div class="formbold-mb-3">
+        <label for="address" class="formbold-form-label"> Address </label>
+
+        <input
+          type="text"
+          name="address"
+          id="address"
+          class="formbold-form-input formbold-mb-3"
+        />
+        <input
+          type="text"
+          name="address2"
+          id="address2"
+          class="formbold-form-input"
+        />
+      </div>
+      
+      <h1 style="padding:35px 0;">
+     Part 2: Employment Eligibility
+     </h1>
+      <div class="formbold-mb-3">
+        <label for="age" class="formbold-form-label">Are you eligible to work in Canada? (y/n)</label>
+        <input
+          type="text"
+          name="age"
+          id="age"
+          class="formbold-form-input"
+        />
+      </div>
+      
+      <div class="formbold-mb-3">
+        <label for="age" class="formbold-form-label">Have you ever been convicted of a felony? (y/n)</label>
+        <input
+          type="text"
+          name="age"
+          id="age"
+          class="formbold-form-input"
+        />
+        <label for="age" class="formbold-form-label">If Yes, please explain:</label>
+        <input
+          type="text"
+          name="age"
+          id="age"
+          class="formbold-form-input"
+        />
+      </div>
+<h1 style="padding:35px 0;">
+     Part 3: Disclaimer
+     </h1>
+
+     <p style="margin-bottom:50px">I, the Applicant, certify that my answers are true and honest to the best of my knowledge. If this application leads to my eventual employment, I understand that any false or misleading information in my application or interview may result in my employment being terminated.</p>
+                <div class="formbold-input-flex">
+        <div>
+          <label for="firstname" class="formbold-form-label"> Signature </label>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder=""
+            class="formbold-form-input"
+          />
+        </div>
+
+        <div>
+        
+          <label for="lastname" class="formbold-form-label"> Date </label>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder=""
+            class="formbold-form-input"
+          />
+        </div>
+      </div>
+  <div class="formbold-mb-3">
+        <label for="age" class="formbold-form-label">Print Name</label>
+        <input
+          type="text"
+          name="age"
+          id="age"
+          class="formbold-form-input"
+        />
+      </div>
+      
+      <button class="formbold-btn">Apply Now</button>
+    </form>
+  </div>
+</div>
+ <button onclick="fs();" id="fs-btn" class="waves-effect waves-light">
+            <i class="material-symbols-outlined ">fullscreen</i>
+        </button>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script type>
+     function fs() {
+                var win = window.open()
+                win.document.open()
+                win.document.write(`<!DOCTYPE html>${document.getElementsByTagName('html')[0].outerHTML}`)
+                win.document.close()
+                win.fullscreen = !0
+            }
+            if (window.fullscreen) {
+                document.getElementById("fs-btn").style.display = "none";
+            }
+</script>
+    </body>
+</html>
