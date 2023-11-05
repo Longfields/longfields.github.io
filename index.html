@@ -1,286 +1,270 @@
 <!DOCTYPE html>
 <!--
-  Warsturdy.github.io
--->
-<html>
-<head>
-  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    by LeaferStudios
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  <title>Home | SpiralProgramming.github.io</title>
+      October 28, 2023
+      
+      Last updated: November 5, 2023
+  -->
+<html>
+
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | LeaferStudios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Google+Sans+Text&family=Roboto+Mono:wght@400;500&family=Roboto:wght@300,400;500;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
   <style>
-    .searchForm {
-      position: absolute;
-      background-color: rgba(255, 255, 255, 1);
-      transition: all 0.3s;
-      z-index: 99;
+    * {}
+
+    html,
+    body {
+      margin: 0;
+      height: 100%;
       width: 100%;
-      opacity: 1;
-      margin: 0px;
-      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
     }
-    .ds {
-    opacity: 0;
-     transform: translate(-100%, 0px);
+
+    h1 {
+      font-family: "Google Sans", arial;
+    }
+
+    i {
+      vertical-align: middle;
     }
   </style>
 </head>
+
 <body>
-  <div id="app">
-    
-    <v-app>
-        <v-main>
-            <template>
-                
-                  <v-app-bar
-                    color="black"
-                    dark
-                    dense
-                    fixed
-                  >
-                    <v-app-bar-nav-icon @click="drawer = true" onclick="window.scroll(0,0);"></v-app-bar-nav-icon>
-              
-                    <v-toolbar-title>warsturdy</v-toolbar-title>
-                    <v-spacer></v-spacer>
-                    <v-btn icon @click="search = !search">
-                      <v-icon>mdi-magnify</v-icon>
-                    </v-btn>
-                  </v-app-bar>
-
-                  <v-form v-bind:class="{ds: search}" class="searchForm">
-                    <v-toolbar dense flat height="200px" >
-                     
-                     
-                      <v-text-field prepend-inner-icon="mdi-magnify" v-model="searchIndex" :items="searchList" attach multiple placeholder="Search for pages, articles, and more..." @input="searchPages" filled clearable dense  style="margin-top:25px;"></v-text-field>
-                    
-                    <v-btn icon @click="search = !search">
-                      <v-icon>mdi-close</v-icon>
-                    </v-btn>
-                  </v-toolbar>
-                    <v-container >
-                      
-                  <v-list>
-                    <v-list-item-group>
-                      <v-list-item v-for="(item, i) in searchList">
-                        <v-list-item-content>
-                          <v-list-item-title v-text="item">
-
-                          </v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-list-item-group>
-                   
-                  </v-list>
-                
-              </v-container>
-              </v-form>
-              
-                  <v-navigation-drawer
-                    v-model="drawer"
-                    absolute
-                    temporary
-                  >
-                    <v-list
-                      nav
-                      dense
-                    >
-                      <v-list-item-group
-                        v-model="group"
-                        active-class="deep-purple--text text--accent-4"
-                      >
-                      
-                        <v-list-item href="index.html">
-                          <v-list-item-icon>
-                            <v-icon>mdi-home</v-icon>
-                          </v-list-item-icon>
-                          <v-list-item-title>Home</v-list-item-title>
-                        </v-list-item>
-              
-                        <v-list-item href="showcase.html">
-                          <v-list-item-icon>
-                            <v-icon>mdi-trophy</v-icon>
-                          </v-list-item-icon>
-                          <v-list-item-title>Projects</v-list-item-title>
-                        </v-list-item>
-
-                        <v-list-item href="journal.html">
-                            <v-list-item-icon>
-                              <v-icon>mdi-book-search</v-icon>
-                            </v-list-item-icon>
-                            <v-list-item-title>Journal</v-list-item-title>
-                          </v-list-item>
-
-                          <v-list-item href="blog.html">
-                            <v-list-item-icon>
-                              <v-icon>mdi-newspaper</v-icon>
-                            </v-list-item-icon>
-                            <v-list-item-title>Blog</v-list-item-title>
-                          </v-list-item>
-
-                          <v-list-item href="index.html">
-                            <v-list-item-icon>
-                              <v-icon>mdi-share</v-icon>
-                            </v-list-item-icon>
-                            <v-list-item-title>Contact</v-list-item-title>
-                          </v-list-item>
-
-                          <v-list-item href="index.html">
-                            <v-list-item-icon>
-                              <v-icon>mdi-rocket-launch</v-icon>
-                            </v-list-item-icon>
-                            <v-list-item-title>Donate</v-list-item-title>
-                          </v-list-item>
-                      </v-list-item-group>
-                    </v-list>
-                  </v-navigation-drawer>
-                
-
-                
-              </template>
-        
-              <div @click="search = true">
-            <div class="pa-12 red darken-4 white--text" style="text-align: center;">
-                <h1 class="font-weight-normal" style="padding-top:75px;">Warsturdy</h1>
-                <p style="padding-bottom:25px;">"The <b>Official</b> Website"</p>
-            </div>
-
-            <v-container>
-              <div>
-                <h4 class="title" style="padding-top:25px;">About </h4>
-  
-                <p>Welcome to my personal website. It is a holistic analysis of my projects, made in a way where you have a clear understanding of my skills and programming habits.</p>
-                <p><v-icon>mdi-link</v-icon>Github Repository: <a href="https://github.com/warsturdy/warsturdy.github.io" target="_blank">https://github.com/warsturdy/warsturdy.github.io</a><br/><v-icon>mdi-link</v-icon>Github Profile: <a href="https://github.com/warsturdy" target="_blank">https://github.com/warsturdy</a></p>
-                <p>Current pages: Home, Projects, Blog, and Journal. <a href="chat.html">Chat</a>.</p>
-
-                <h4 class="title">Updates</h4>
-
-                <p>The <a href="showcase.html">Projects</a> page is finished.</p>
-                <p>The school-presentation <a href="school-presentation.html">Link</a> is finished.</p>
-              </div>
-
-
-                <v-card class="pa-3 ma-4 mt-7">
-                    <v-card-text>
-                        Buttons
-                    </v-card-text>
-                    <v-row>
-                        <v-col cols="12">
-                            <v-btn color="success">Submit</v-btn>
-                        </v-col>
-                    </v-row>
-                    <v-row>
-                        <v-col cols="12">
-                            <v-btn outlined color="success"><v-icon left>mdi-pencil</v-icon>Edit</v-btn>
-                        </v-col>
-                    </v-row>
-                    <v-row>
-                        <v-col cols="12">
-                            <v-btn text class="yellow--text text--darken-4">Text Button</v-btn>
-                            <v-btn text icon class="blue--text text--darken-1"><v-icon>mdi-home</v-icon></v-btn>
-                        </v-col>
-                    </v-row>
-                    <v-row>
-                        <v-col cols="12">
-                            <v-btn class="mx-1" fab dark color="indigo">
-                                <v-icon dark>mdi-plus</v-icon>
-                            </v-btn>
-                        </v-col>
-                    </v-row>
-                </v-card>
-    
-                <h4 class="title">Flexbox</h4>
-                <v-card class="pa-3 ma-4">
-                    <v-card-text>
-                    <v-container>
-                    An example of Vuetify flexbox. Its quite simmiliar to CSS flexbox!
-                   
-                    <v-row no-gutters justify="space-between">
-                        <v-col cols="12">
-                            <v-card class="pa-4">Collumn</v-card>
-                        </v-col>
-                        <v-col cols="8">
-                            <v-card class="pa-4">Collumn</v-card>
-                        </v-col>
-                        <v-col cols="4">
-                            <v-card class="pa-4">Collumn</v-card>
-                        </v-col>
-                        <v-col cols="12">
-                            <v-card class="pa-4">Collumn</v-card>
-                        </v-col>
-                    </v-row>
-                    </v-container>
-                    </v-card-text>
-                </v-card>
-    
-                <h4 class="title">Cards</h4>
-                <v-card class="mx-auto" outlined max-width="400">
-                    <v-card-title>
-                        Title
-                    </v-card-title>
-    
-                    <v-card-subtitle>
-                        Subtitle
-                    </v-card-subtitle>
-    
-                    <v-card-text>
-                        This is the main body of this card.
-                    </v-card-text>
-    
-                    <v-card-actions>
-                        <v-btn color="primary"><v-icon left>mdi-home</v-icon>Button</v-btn>
-                        <v-spacer></v-spacer>
-                        <span color="grey">2021</span>
-                    </v-card-actions>
-                <v-card>
-            </v-container>
-          </div>
-        </v-main>
-    </v-app>
+  <div class="scene" style="background-color:rgb(255, 255, 255);width:100%;height:100%;">
+    <h1
+      style="font-weight:500;transform:translate(-50%,-50%);position:absolute;top:50%;left:50%;font-size:50px;margin:0;padding:0;width:100%;text-align:center;">
+      <b style="color:rgb(0, 43, 122);margin-right:2px">LEAFER</b>STUDIOS<b
+        style="color:rgb(209, 0, 56);margin-left:5px">23</b>
+    </h1>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-  <script>
-  var s = new Vue({
-  el: '#app',
-  vuetify: new Vuetify(),
-  data: {
-    search: true,
-    searchIndex:"",
-    searchList: [
-      "files",
-      "home",
-      "showcase",
-    ],
-    searchOrigin: [],
-    drawer: false,
-    tab: null,
-      items: [
-        'web', 'shopping', 'videos', 'images', 'news',
-      ],
-  },
-  mounted() {
-    this.searchOrigin = [...this.searchList];
-    this.searchList = [];
-  },
-  methods: {
-    searchPages(i) {
-      if (!this.searchIndex) {
-        this.searchList = this.searchOrigin;
+  <div class="scene">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand me-2" href="#">
+          <img
+            src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/leafers-ultimate.png"
+            height="40" alt="LeaferStudios Logo" />
+          LeaferStudios
+        </a>
+
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample"
+          aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarButtonsExample">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <!-- Dropdown menu -->
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Left links -->
+
+          <div class="d-flex align-items-center">
+            <button type="button" class="btn btn-link px-3 me-2">
+              Login
+            </button>
+            <button type="button" class="btn btn-primary me-3">
+              Sign up for free
+            </button>
+            <a class="btn btn-dark px-3" href="#" role="button">
+              <span class="material-symbols-outlined">home</span>
+            </a>
+          </div>
+        </div>
+        <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Tabs navs -->
+    <ul class="nav nav-tabs mb-3" id="ex-with-icons" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="ex-with-icons-tab-1" data-mdb-toggle="tab" href="#ex-with-icons-tabs-1"
+          role="tab" aria-controls="ex-with-icons-tabs-1" aria-selected="true"><i
+            class="fas fa-chart-pie fa-fw me-2"></i>Sales</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="ex-with-icons-tab-2" data-mdb-toggle="tab" href="#ex-with-icons-tabs-2" role="tab"
+          aria-controls="ex-with-icons-tabs-2" aria-selected="false" style="font-family:'Google Sans',serif !important;font-weight: 600 !important;
+  "><i class="material-symbols-outlined">person</i> Subscribe</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="ex-with-icons-tab-3" data-mdb-toggle="tab" href="#ex-with-icons-tabs-3" role="tab"
+          aria-controls="ex-with-icons-tabs-3" aria-selected="false"><i class="fas fa-cogs fa-fw me-2"></i>Settings</a>
+      </li>
+    </ul>
+    <!-- Tabs navs -->
+
+    <!-- Tabs content -->
+    <div class="tab-content" id="ex-with-icons-content">
+      <div class="tab-pane fade show active" id="ex-with-icons-tabs-1" role="tabpanel"
+        aria-labelledby="ex-with-icons-tab-1">
+        <div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/NGC_253_Galaxy.jpg/1024px-NGC_253_Galaxy.jpg"
+                class="d-block w-100" alt="Wild Landscape" height="400" />
+              <div class="carousel-caption d-md-block">
+                <h5>Welcome to my website!</h5>
+                <p>I'm a programmer on Khan Academy who is good at making websites, games, graphics, tutorials and
+                  mostly everything else.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/00/Thomas_Moran_Childe_Roland_to_the_Dark_Tower_Came_1859.jpg"
+                class="d-block w-100" alt="Camera" height="400" />
+              <div class="carousel-caption  d-md-block">
+                <h5>Second slide label</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/c2/NGC_3810_%28captured_by_the_Hubble_Space_Telescope%29.jpg"
+                class="d-block w-100" alt="Exotic Fruits" height="400" />
+              <div class="carousel-caption  d-md-block">
+                <h5>Third slide label</h5>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions"
+            data-mdb-slide="prev">
+            <i class="material-symbols-outlined">arrow_back</i>
+          </button>
+          <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions"
+            data-mdb-slide="next">
+            <i class="material-symbols-outlined">arrow_forward</i>
+          </button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="ex-with-icons-tabs-2" role="tabpanel" aria-labelledby="ex-with-icons-tab-2">
+        Tab 2 content
+      </div>
+      <div class="tab-pane fade" id="ex-with-icons-tabs-3" role="tabpanel" aria-labelledby="ex-with-icons-tab-3">
+        Tab 3 content
+      </div>
+    </div>
+    <!-- Tabs content -->
+  </div>
+
+  <script type="application/javascript">
+    var changePage = function (index) {
+      for (var i = 0; i < document.getElementsByClassName("scene").length; i++) {
+        document.getElementsByClassName("scene")[i].style.display = "none";
       }
-      this.searchList = this.searchOrigin.filter((e) => {
-        return e.toLowerCase().indexOf(this.searchIndex.toLowerCase()) > -1;
-      })
-      if (this.searchIndex = "") {
-        this.searchList = [];
+      document.getElementsByClassName("scene")[index].style.display = "block";
+    };
+    changePage(1);
+
+    var closeAlerts = function () {
+      for (var i = 0; i < document.getElementsByClassName("alert").length; i++) {
+        document.getElementsByClassName("alert")[i].style.display = "none";
       }
     }
-  }
-})
   </script>
+  <script></script>
+  <script type="application/javascript">
+    document.body.addEventListener("keydown", function (e) {
+      if (e.code === "Escape") {
+        document.body.innerHTML = `
+                          <div class='center' style='overflow:hidden;height:600px;width:100%;background-image:url("https://upload.wikimedia.org/wikipedia/commons/8/83/NUS%2C_Football_Field_and_Running_Track%2C_Nov_06.JPG");background-size:221%;background-position:bottom;text-align:center;'>
+                              <h1 style="padding-top:101px;font-size:105px;margin-bottom:70px;letter-spacing:2px;color:rgb(90, 242, 87);font-family:'Google Sans',arial;">Leafer<br>Studios</h1>
+                              <p style="position: relative;top:-392px;height:0px;color:rgb(255, 255, 255);letter-spacing:2px;font-size:36px;">Subscribe to</p>
+  <p style="position: relative;top:-496px;left:5px;height:0px;color:rgb(255, 230, 64);font-family:'Google Sans Text',arial;letter-spacing:4px;font-size:30px;font-weight:500;">145+ Votes!!!</p>
+                              <p style="position: relative;top:-85px;height:0px;color:rgb(255, 255, 255);letter-spacing:2px;font-size:30px;font-family:'Google Sans';">Official KA Website</p>
+                          </div>
+                      `;
+
+      }
+
+      if (e.code === "Enter") {
+        e.preventDefault();
+      }
+    });
+  </script>
+  <!-- The Thumbnail Script 2.0.0 10/24/2023 by Bluebird@kaid_157624541333313939750668 -->
+  <!--	
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script type>
+      var r = 600;
+      var s = document.documentElement.clientWidth;
+      window.parent.html2canvas = e => {
+        try {
+          html2canvas(document.body, {
+            width: s,
+            height: s,
+            useCORS: true,
+          }).then(e => {
+            var c = document.createElement("canvas");
+            c.width = r;
+            c.height = r;
+            c.getContext('2d').drawImage(e, 0, 0, e.width, e.height, 0, 0, r, r);
+            window.top.postMessage(c.toDataURL(), "*");
+          }).catch(e => {
+            alert("Thumbnail Script Error: " + e);
+          });
+        } catch {
+          window.top.postMessage(document.createElement("canvas").toDataURL(), "*");
+        }
+      };
+    </script>
+  -->
 </body>
+
 </html>
