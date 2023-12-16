@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--
+    Todo: Finish everything
+-->
+<html>
+
+<head>
+	<title>Cybersecurity Presentation December 2023</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css" integrity="sha512-USp+nLNMZ1hR0Ll/LpYDxIq47Ypcm3KfjIleOnyFrB1N5KfHLXjfPQD1wQlhv7kVHRRgPvNVtendDS72LyHviA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Golos+Text:wght@400;500;600&family=Montserrat:wght@400;500&family=PT+Serif&family=Roboto&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
+	<script>
+		var author = "LeaferStudios";
+	</script>
+	<style>
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "Montserrat" !important;
+		}
+
+		ul.bad-example li {
+			background-size: contain;
+			margin: 0;
+			padding: 0px 0 0px 84px;
+			list-style-type: none !important;
+			background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a2/X_mark.svg");
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: 25px;
+			margin: 20px 0;
+		}
+		ul.good-example li {
+			background-size: contain;
+			margin: 0;
+			padding: 0px 0 0px 84px;
+			list-style-type: none !important;
+		    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8f/Checkmark.svg');
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: 25px;
+			margin: 20px 0;
+		}
+
+		i.material-symbols-outlined {
+			vertical-align: middle;
+		}
+
+		span.material-symbols-outlined {
+			vertical-align: middle;
+		}
+	</style>
+</head>
+
+<body>
+	<div class='reveal'>
+		<div class='slides' data-transition="zoom">
+			<!--
+		    Step 1: Strong Passwords
+		    -->
+		    <section style="height:100%;">
+				<h2 class='fragment fade-down' style='margin-top:0 !important;'><em style='font-family:monospace;color:rgb(191, 222, 201);'>Strong</em> Passwords</h2>
+
+				<ul class='good-example'>
+					<li class='fragment fade-up'><b style='color:rgb(191, 222, 201);font-weight:400;'>10+ characters long</b></li>
+					<li class='fragment fade-up'><b style='color:rgb(191, 222, 201);font-weight:400;'>Uppercase & Lowercase</b></li>
+					<li class='fragment fade-up'><b style='color:rgb(191, 222, 201);font-weight:400;'>Numbers & Symbols</b></li>
+					<li class='fragment fade-up'><b style='color:rgb(191, 222, 201);font-weight:400;'>Irregular</b></li>
+					<li class='fragment fade-up'><b style='color:rgb(191, 222, 201);font-weight:400;'>Unique</b> <i class='material-symbols-outlined'>arrow_forward</i> <em>Single Use</em></li>
+				</ul>
+			</section>
+		    
+            <!-- Weak Passwords: Never create weak passwords. You should never use names like "Bob" or "Percy" as your password. Personal information like your name and birthyear make a weak password. Sports references are extremely common for passwords, and get cracked very quickly. Four digit years like "2023" and "2009" should be avoided and predictable patterns like ABCDEFG or 123456. -->
+			<section style="height:100%;">
+				<h2 class='fragment fade-down' style='margin-top:0 !important;'><em style='font-family:monospace;color:rgb(192,208,224);'>Weak</em> Passwords</h2>
+
+				<ul class='bad-example'>
+					<li class='fragment fade-up'><b style='color:rgb(192, 208, 224);font-weight:400;'>Names</b> <i class='material-symbols-outlined'>arrow_forward</i> <em>"Bob"</em></li>
+					<li class='fragment fade-up'><b style='color:rgb(192, 208, 224);font-weight:400;'>Personal Info</b> <i class='material-symbols-outlined'>arrow_forward</i> <em>"Mark2009"</em></li>
+					<li class='fragment fade-up'><b style='color:rgb(192, 208, 224);font-weight:400;'>Sports References</b> <i class='material-symbols-outlined'>arrow_forward</i> <em>"6dunks"</em></li>
+					<li class='fragment fade-up'><b style='color:rgb(192, 208, 224);font-weight:400;'>Years</b> <i class='material-symbols-outlined'>arrow_forward</i> <em>"2023"</em></li>
+					<li class='fragment fade-up'><b style='color:rgb(192, 208, 224);font-weight:400;'>Predictable Patterns</b> <i class='material-symbols-outlined'>arrow_forward</i> <em>"123456"</em></li>
+				</ul>
+				<img class='fragment fade-in' src='https://upload.wikimedia.org/wikipedia/commons/d/d5/No_sign.svg' style='width:200px;position:absolute;left:50%;top:85%;transform:translate(-50%,-15%);'>
+			</section>
+			
+			<!-- Let's take a look at some of the "Weak" passwords, and how long it would take for a computer to crack them. -->
+			<section>
+				<h2 style='margin-top:0px;text-transform:none;' class='fragment fade-down'><i class='material-symbols-outlined' style='font-size:inherit;margin-top:-15px;'>key</i> <em style='font-family:monospace;color:rgb(192,208,224);'>Bob</em></h2>
+				
+				<hr/>
+				
+				
+				<p class='fragment fade-in'><i class='material-symbols-outlined' style='font-size:inherit;'>lock</i> 3 microseconds</p>
+				
+				<hr>
+                <br>
+				<h1 class='fragment fade-down'>0.000003</h1>
+
+				<p class='fragment fade-up'><i class='material-symbols-outlined' style='font-size:inherit;'>lock_open</i> Seconds to crack</p>
+			</section>
+
+			<section>
+				<h2 style='margin-top:0px;text-transform:none;' class='fragment fade-down'><i class='material-symbols-outlined' style='font-size:inherit;margin-top:-15px;'>key</i> <em style='font-family:monospace;color:rgb(192,208,224);'>6dunks</em></h2>
+				
+				<hr/>
+				
+				
+				<p class='fragment fade-in'><i class='material-symbols-outlined' style='font-size:inherit;'>lock</i> 54 milliseconds</p>
+				
+				<hr>
+                <br>
+				<h1 class='fragment fade-down'>0.054</h1>
+
+				<p class='fragment fade-up'><i class='material-symbols-outlined' style='font-size:inherit;'>lock_open</i> Seconds to crack</p>
+			</section>
+
+			<!--
+    Once upon a time, there lived Hopper. Every day, he played video games online on his moms computer. 
+    One day, he clicks a suspicious looking link. Then, it takes him to a very suspicious looking website which injects a virus into his computer.
+    
+    OR.
+    Once upon a time, there lived Hopper. Every day, he played video games online on his moms computer. 
+    One day, he creates an account for a gaming website and sets his password to "Hopper23". 
+    The next day, he finds out that his account got hacked, and since he uses the same password for all websites, his email and social media got hacked as well.
+    So he goes to his friend Leafers. Leafers is a cybersecurity expert.  
+    -->
+			<section>
+				<div class=''>
+					<img src='https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/creatures/Hopper-Happy.png' style='width:300px;float:right;'>
+				</div>
+				<div class='row'>
+					<div class='col'></div>
+					<div class="col">
+						<img class='fragment fade-in' src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Nuvola_desk_2.svg/800px-Nuvola_desk_2.svg.png' style='position:absolute;left:0;top:60%;width:400px'>
+						<img class='fragment fade-in' src='https://upload.wikimedia.org/wikipedia/commons/d/d7/Desktop_computer_clipart_-_Yellow_theme.svg' style='position:absolute;left:100px;top:42%;width:200px'>
+					</div>
+
+
+				</div>
+			</section>
+
+			<section>
+				<h1>Cybersecurity</h1>
+
+				<p>by <span class='author'></span></p>
+			</section>
+
+			<!-- Hook 
+    Alright guys, before I begin my presentation I'm going to tell you guys a story. A couple years ago, I asked my friend, a cybersecurity expert, for tips on staying safe online. The first thing I learned from her was how often cyber attacks happen. How many cyber attacks do YOU think happen everyday? 
+    -->
+			<section data-background-image='https://upload.wikimedia.org/wikipedia/commons/8/8a/Hacker-3342696_1920-1024x788.jpg'>
+				<h1></h1>
+
+			</section>
+
+			<!-- Reveal
+    I was so surprised when I found out that there are over 2,200 cyber attacks everyday, meaning that 2,200 people get hacked every single day.
+    -->
+			<section data-background-color='white' data-background-image='https://upload.wikimedia.org/wikipedia/commons/4/4d/BlankMap-World.svg' data-background-size="150%">
+				<h1 class='r-fit-text fragment fade-in' style='font-weight:500;'>2,200+</h1>
+				<p class='r-fit-text fragment fade-in'>Cyber attacks everyday</p>
+			</section>
+
+
+
+			<section>
+				<h3>Passwords</h3>
+				<img src='https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/animals/birds_rainbow-lorakeets.png' style='position:absolute;left:0;top:0;'>
+				<p>Variety</p>
+			</section>
+			<section>
+				<h2 class='r-fit-text'>Cybersecurity</h2>
+				Password Encryptor
+			</section>
+
+			<section data-auto-animate>
+				<h1>One</h1>
+			</section>
+			<section data-auto-animate>
+				<h1>One</h1>
+				<h1>Two</h1>
+			</section>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js" integrity="sha512-9dFFU5pcR8K4bvw4ng6mLMW5IjslYbA57amHEMtHn3TT9RkKivsDabKffqjUUJ4pCaojAyH05T1OESld199Gcw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		Reveal.initialize({
+			transition: 'none'
+		});
+		Reveal.configure({
+			progress: false
+		});
+		Reveal.configure({
+			controls: false,
+			center: false,
+		});
+		Reveal.initialize({
+			margin: 0
+		});
+		for (var i = 0; i < document.getElementsByClassName("author").length; i++) {
+			document.getElementsByClassName("author")[i].innerHTML = author;
+		}
+	</script>
+</body>
+
+</html>
